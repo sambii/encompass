@@ -1,0 +1,27 @@
+<h1>TEMPLATE/COMPONENT/PROBS_COMPONENT</h1>
+<header>
+  <h2>Problems COMPONENT</h2>
+  <div className="clear"></div>
+</header>
+
+<section>
+  <nav class="users actions listing al_vertical_stretch">
+    <h2>Your problems from COMPONENT</h2>
+    <ul class="actions">
+      <li>{{#link-to 'problems.new'}}New Problem COMPONENT{{/link-to}}</li>
+    </ul>
+    <ul class="list all problems">
+      <h4>List all Problems</h4>
+      <h4>List all Problems</h4>
+      <h4>List all Problems</h4>
+      <h4>List all Problems</h4>
+      {{#each model as |problem|}}
+       <li>{{#link-to 'problem' problem classNames='problem'}}{{problem.title}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+    <h2>Public Problems COMPONENT</h2>
+
+  </nav>
+</section>
+
+{{yield}}
