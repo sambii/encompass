@@ -1,35 +1,33 @@
-// import Ember from 'ember'
+// //import Ember from 'ember';
 
-// export default Ember.Component.extend({
-//   tagName: 'index home page',
-//   classNameBindings: ['isSmallHeader:small', 'isHidden:hide'],
-//   elementId: 'al_header',
-//   isSmallHeader: false,
-//   isHidden: false,
-
-//   actions: {
-//     largeHeader: function () {
-//       this.set('isSmallHeader', false)
-//     },
-//     smallHeader: function () {
-//       this.set('isSmallHeader', true)
-//     }
-//   }
-// })
+// // export default Ember.Component.extend({
 
 Encompass.IndexComponent = Ember.Component.extend({
   tagName: 'index',
-  classNameBindings: ['isSmallHeader:small', 'isHidden:hide'],
-  elementId: 'al_header',
-  isSmallHeader: false,
-  isHidden: false,
+  classNameBindings: ['homepage', 'index'],
+  
+  init () {
+    this._super(...arguments)
+    console.log('init')
+  },
 
-  actions: {
-    largeHeader: function () {
-      this.set('isSmallHeader', false)
-    },
-    smallHeader: function () {
-      this.set('isSmallHeader', true)
-    }
+  didReceiveAttrs () {
+    this._super(...arguments)
+    console.log('did receive attrs')
+  },
+
+  willRender () {
+    this._super(...arguments)
+    console.log('will render')
+  },
+
+  didInsertElement () {
+    this._super(...arguments)
+    console.log('did insert element')
+  },
+
+  didRender () {
+    this._super(...arguments)
+    console.log('did render')
   }
 })

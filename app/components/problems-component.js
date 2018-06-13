@@ -18,3 +18,5 @@ Encompass.ProblemsComponent = Ember.Component.extend({
     }
   }
 })
+
+
