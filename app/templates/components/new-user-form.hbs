@@ -1,12 +1,11 @@
-<h1>NEW USER FORM</h1>
+<h1>NEW USER FORM COMPONENT</h1>
 
 <header>
   <h2>Create New User</h2>
   <div class="clear"></div>
 </header>
 
-{{!-- <section class="newUser">
-  <h2>Create New User</h2>
+<section class="newUser">
   <form id="newUser">
     Name:
     {{input type="text" value=newUserName classNames="displayName"}}
@@ -16,8 +15,7 @@
     {{input type="checkbox" name=newUserAuthorized checked=newUserAuthorized classNames="isAuthorized"}}
     <button class="newUser" {{action 'newUser'}}>add user</button>
   </form>
-  <p>Users are automatically created on log in, however if you want to create them ahead of time (so that they are authorized) you can do that here.</p>
-</section> --}}
-
+</section> 
+<p>Users are automatically created on log in, however if you want to create them ahead of time (so that they are authorized) you can do that here.</p>
 
 {{yield}}
