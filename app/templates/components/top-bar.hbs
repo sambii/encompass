@@ -18,13 +18,13 @@
         </ul>
       </li>
       <li>{{#link-to 'responses' classNames='menu responses'}}responses & reflections{{/link-to}}</li>
-      <li>{{#link-to 'users' classNames='menu users'}}users{{/link-to}}
+
+      <li>{{#link-to 'users' classNames='menu user'}}users{{/link-to}}
         <ul>
-			    {{#if user.isAdmin}}
           <li>{{#link-to 'users.new'}}new{{/link-to}}</li>
-          {{/if}}
         </ul>
       </li>
+    
 			{{!--<li>{{#link-to 'folders'}}folders{{/link-to}}</li>--}}
       {{#if user.isAuthenticated}}
         <li>{{#link-to 'logout' classNames='menu logout'}}logout{{/link-to}}</li>
