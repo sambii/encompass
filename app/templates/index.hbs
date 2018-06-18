@@ -1,14 +1,8 @@
 
 {{!-- known as block component --}}
-{{#index-component}} 
-  <h5>Hola</h5>
-{{/index-component}} 
+{{index-component}} 
 
-{{#each model as |post|}}
-  {{#blog-post title=post.title}}
-    {{post.body}}
-  {{/blog-post}}
-{{/each}}
+
 
 {{!-- <div id="welcome" class="al_wtf">
 	<h1>Welcome to the EnCoMPASS Project</h1>
