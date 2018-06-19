@@ -5,18 +5,35 @@
 Encompass.ProblemsComponent = Ember.Component.extend({
   tagName: 'problems',
   classNameBindings: ['isSmallHeader:small', 'isHidden:hide'],
-  elementId: 'al_header',
-  isSmallHeader: false,
-  isHidden: false,
 
-  actions: {
-    largeHeader: function () {
-      this.set('isSmallHeader', false)
-    },
-    smallHeader: function () {
-      this.set('isSmallHeader', true)
-    }
+  // init() {
+  //   this._super(...arguments);
+  //   this.get('problems')('').then((allResults) => this.set('results', allResults.results));
+  // },
+
+  init () {
+    this._super(...arguments)
+    console.log('this is init')
+  },
+
+  //this.get('problems') used to get array of objects
+  didReceiveAttrs () {
+    this._super(...arguments)
+    console.log('did receive atts', this.get('problems'))
+  },
+
+  willRender () {
+    this._super(...arguments)
+    console.log('will render')
+  },
+
+  didInsertElement () {
+    this._super(...arguments)
+    console.log('did insert element')
+  },
+
+  didRender () {
+    this._super(...arguments)
+    console.log('did render')
   }
 })
-
-

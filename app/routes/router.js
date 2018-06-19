@@ -55,6 +55,7 @@ Encompass.Router.map(function() {
     });
     this.route("new");
   });
+
   this.route("workspaces", function(){
     this.route("index", {path: "/"});
     this.route("mine");
@@ -81,12 +82,15 @@ Encompass.Router.map(function() {
       });
     });
   });
+
   // this.route("problem");
   this.route("problems", function(){
     this.route("problem", {resetNamespace: true, path: '/:problem_id'}, function() {
     });
     this.route("new");
     });
+
+    
   this.route("responses", function(){
     this.route("responses.new", {resetNamespace: true, path: '/new'}, function() {
       this.route("submission", {path: '/submission/:submission_id'});
