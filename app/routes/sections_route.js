@@ -9,5 +9,9 @@ Encompass.SectionsRoute = Encompass.AuthenticatedRoute.extend({
     var sections = store.findAll('section');
     // Filter only problems by current logged in user
     return sections;
+  },
+
+  renderTemplate: function(){
+    this.render('sections/sections');
   }
 });
