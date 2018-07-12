@@ -7,7 +7,7 @@
   <nav class="users actions listing al_vertical_stretch">
     <h2>Your sections</h2>
     <ul class="actions">
-      <li>{{#link-to 'sections.new'}}New section{{/link-to}}</li>
+      <li>{{#link-to 'sections.new'}}Create New Section{{/link-to}}</li>
     </ul>
     <ul class="listing">
       {{#each sections as |section|}}
@@ -16,4 +16,10 @@
     </ul>
 
   </nav>
+
+   <div class="listOutlet sections">
+      {{outlet}}
+  </div>
+
+  <div class="clear"/>
 </section>
